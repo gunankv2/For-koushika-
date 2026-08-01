@@ -1,158 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>For Koushika ❤️</title>
-
-<link rel="stylesheet" href="style.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For Koushika ❤️</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<div id="loading">
+  <!-- Loading Screen -->
+  <div id="loading">
+    <div class="loader">❤️</div>
+    <h2>Loading Your Surprise...</h2>
+  </div>
 
-<div class="loader">❤️</div>
+  <!-- Home Page -->
+  <section id="home" class="page active">
+    <div class="card">
+      <h1>❤️ Happy Girlfriend Day ❤️</h1>
+      <p>I made something special just for you...</p>
+      <button id="startBtn">Begin ❤️</button>
+    </div>
+  </section>
 
-<h2>Loading Your Surprise...</h2>
+  <!-- Journey Page -->
+  <section id="journey" class="page">
+    <div class="card">
+      <h1>📅 Our Journey</h1>
+      <h2>03 December 2025</h2>
+      <p>
+        Every beautiful story begins with one beautiful moment.
+        Ours started here ❤️
+      </p>
+      <button id="nextBtn">Continue ❤️</button>
+    </div>
+  </section>
 
-</div>
+  <!-- Question Page -->
+  <section id="questionPage" class="page">
+    <div class="card">
+      <h2>Do you want to see our memories? 💕</h2>
+      <div class="btnArea">
+        <button id="yesBtn">❤️ YES</button>
+        <button id="noBtn">🤍 NO</button>
+      </div>
+    </div>
+  </section>
 
-<section id="home" class="page active">
+  <!-- Balloon Game Page -->
+  <section id="balloonPage" class="page">
+    <div class="card">
+      <h1>🎈 Pop Every Balloon</h1>
+      <p>Pop all balloons to unlock our memories ❤️</p>
+      <div id="balloonContainer"></div>
+    </div>
+  </section>
 
-<div class="card">
+  <!-- Gallery Page -->
+  <section id="galleryPage" class="page">
+    <div class="card">
+      <h1>📸 Our Memories</h1>
+      <div class="gallery">
+        <!-- Yahan aap apni photo ka filename ya image link daal sakte hain -->
+        <img src="photo.jpg" alt="Our Memory">
+      </div>
+    </div>
+  </section>
 
-<h1>❤️ Happy Girlfriend Day ❤️</h1>
+  <!-- Love Letter Page -->
+  <section id="letterPage" class="page">
+    <div class="card">
+      <h1>💌 My Letter</h1>
+      <div id="letterText"></div>
+      <button id="finishBtn">❤️ Continue</button>
+    </div>
+  </section>
 
-<p>
+  <!-- End Page -->
+  <section id="endPage" class="page">
+    <div class="card">
+      <h1>❤️ Forever ❤️</h1>
+      <h2>Koushika ❤️ Gunank</h2>
+      <p>
+        Thank you for being the most beautiful part of my life.<br>
+        No matter where life takes us, I will always choose you.<br><br>
+        ❤️ Forever Yours ❤️
+      </p>
+      <button onclick="location.reload()">🔄 Replay</button>
+    </div>
+  </section>
 
-I made something special just for you...
-
-</p>
-
-<button id="startBtn">
-
-Begin ❤️
-
-</button>
-
-</div>
-
-</section>
-
-<section id="journey" class="page">
-
-<div class="card">
-
-<h1>📅 Our Journey</h1>
-
-<h2>03 December 2025</h2>
-
-<p>
-
-Every beautiful story begins with one beautiful moment.
-
-Ours started here ❤️
-
-</p>
-
-<button id="nextBtn">
-
-Continue ❤️
-
-</button>
-
-</div>
-
-</section>
-
-  <!-- Question -->
-
-<section id="questionPage" class="page">
-<div class="card">
-
-<h2>Do you want to see our memories? 💕</h2>
-
-<div class="btnArea">
-<button id="yesBtn">❤️ YES</button>
-<button id="noBtn">🤍 NO</button>
-</div>
-
-</div>
-</section>
-
-<!-- Balloon Game -->
-
-<section id="balloonPage" class="page">
-<div class="card">
-
-<h1>🎈 Pop Every Balloon</h1>
-
-<p>Pop all balloons to unlock our memories ❤️</p>
-
-<div id="balloonContainer"></div>
-
-</div>
-</section>
-
-<!-- Gallery -->
-
-<section id="galleryPage" class="page">
-<div class="card">
-
-<h1>📸 Our Memories</h1>
-
-<div class="gallery">
-
-<img src="
-
-  <!-- Love Letter -->
-
-<section id="letterPage" class="page">
-<div class="card">
-
-<h1>💌 My Letter</h1>
-
-<div id="letterText"></div>
-
-<button id="finishBtn">
-❤️ Continue
-</button>
-
-</div>
-</section>
-
-<!-- End -->
-
-<section id="endPage" class="page">
-<div class="card">
-
-<h1>❤️ Forever ❤️</h1>
-
-<h2>Koushika ❤️ Gunank</h2>
-
-<p>
-
-Thank you for being the most beautiful part of my life.
-
-No matter where life takes us,
-I will always choose you.
-
-❤️ Forever Yours ❤️
-
-</p>
-
-<button onclick="location.reload()">
-🔄 Replay
-</button>
-
-</div>
-</section>
-
-<script src="script.js"></script>
-
+  <script src="script.js"></script>
 </body>
 </html>
