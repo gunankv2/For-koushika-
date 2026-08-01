@@ -5,91 +5,104 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>For Koushika ❤️</title>
   <link rel="stylesheet" href="style.css">
+  <!-- Premium Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;600&family=Alex+Brush&display=swap" rel="stylesheet">
 </head>
 <body>
 
+  <!-- Ambient Golden Glow -->
+  <div class="ambient-glow"></div>
+  <div class="bg-particles" id="bgParticles"></div>
+
   <!-- Loading Screen -->
   <div id="loading">
-    <div class="loader">❤️</div>
-    <h2>Loading Your Surprise...</h2>
+    <div class="luxury-loader">
+      <div class="pulse-ring"></div>
+      <span class="heart-icon">✦</span>
+    </div>
+    <p class="loading-sub">Unlocking a private experience...</p>
   </div>
 
   <!-- Home Page -->
   <section id="home" class="page active">
-    <div class="card">
-      <h1>❤️ Happy Girlfriend Day ❤️</h1>
-      <p>I made something special just for you...</p>
-      <button id="startBtn">Begin ❤️</button>
+    <div class="card glass-card">
+      <span class="tag">Exclusively For You</span>
+      <h1 class="serif-title">Happy Girlfriend Day</h1>
+      <div class="divider"><span>✧</span></div>
+      <p class="body-text">I created a small, timeless space in this digital world, dedicated solely to you...</p>
+      <button id="startBtn" class="premium-btn">Begin Experience <span class="arrow">→</span></button>
     </div>
   </section>
 
   <!-- Journey Page -->
   <section id="journey" class="page">
-    <div class="card">
-      <h1>📅 Our Journey</h1>
-      <h2>03 December 2025</h2>
-      <p>
-        Every beautiful story begins with one beautiful moment.
-        Ours started here ❤️
-      </p>
-      <button id="nextBtn">Continue ❤️</button>
+    <div class="card glass-card">
+      <span class="tag">The Beginning</span>
+      <h1 class="serif-title">Where It All Began</h1>
+      <div class="gold-badge">03 . 12 . 2025</div>
+      <p class="body-text">Every extraordinary chapter starts with a single moment.<br>Ours was written on this very day.</p>
+      <button id="nextBtn" class="premium-btn">Continue Journey <span class="arrow">→</span></button>
     </div>
   </section>
 
-  <!-- Question Page -->
+  <!-- Prank Question Page -->
   <section id="questionPage" class="page">
-    <div class="card">
-      <h2>Do you want to see our memories? 💕</h2>
+    <div class="card glass-card">
+      <h2 class="serif-subtitle">Shall we step into our cherished memories?</h2>
       <div class="btnArea">
-        <button id="yesBtn">❤️ YES</button>
-        <button id="noBtn">🤍 NO</button>
+        <button id="yesBtn" class="premium-btn">Yes, Always ✨</button>
+        <button id="noBtn" class="outline-btn">Not Yet 🤍</button>
       </div>
     </div>
   </section>
 
   <!-- Balloon Game Page -->
   <section id="balloonPage" class="page">
-    <div class="card">
-      <h1>🎈 Pop Every Balloon</h1>
-      <p>Pop all balloons to unlock our memories ❤️</p>
+    <div class="card glass-card">
+      <span class="tag">Interactive</span>
+      <h1 class="serif-title">Unlock The Vault</h1>
+      <p class="body-text">Tap all 15 glowing pearls to reveal your memories</p>
       <div id="balloonContainer"></div>
     </div>
   </section>
 
   <!-- Gallery Page -->
   <section id="galleryPage" class="page">
-    <div class="card">
-      <h1>📸 Our Memories</h1>
+    <div class="card glass-card">
+      <span class="tag">Memories</span>
+      <h1 class="serif-title">Captured Moments</h1>
       <div class="gallery">
-        <!-- Yahan aap apni photo ka filename ya image link daal sakte hain -->
-        <img src="photo.jpg" alt="Our Memory">
+        <div class="img-frame">
+          <img src="photo.jpg" alt="Our Memory" onerror="this.src='https://images.unsplash.com/photo-1518199266791-5375a83190b7?auto=format&fit=crop&w=800&q=80'">
+        </div>
       </div>
+      <button id="galleryNextBtn" class="premium-btn">Read My Letter <span class="arrow">→</span></button>
     </div>
   </section>
 
   <!-- Love Letter Page -->
   <section id="letterPage" class="page">
-    <div class="card">
-      <h1>💌 My Letter</h1>
-      <div id="letterText"></div>
-      <button id="finishBtn">❤️ Continue</button>
+    <div class="card glass-card letter-card">
+      <span class="tag">A Personal Note</span>
+      <h1 class="serif-title">My Heart To Yours</h1>
+      <div id="letterText" class="letter-box"></div>
+      <button id="finishBtn" class="premium-btn" style="display:none;">Forever & Always ✨</button>
     </div>
   </section>
 
   <!-- End Page -->
   <section id="endPage" class="page">
-    <div class="card">
-      <h1>❤️ Forever ❤️</h1>
-      <h2>Koushika ❤️ Gunank</h2>
-      <p>
-        Thank you for being the most beautiful part of my life.<br>
-        No matter where life takes us, I will always choose you.<br><br>
-        ❤️ Forever Yours ❤️
-      </p>
-      <button onclick="location.reload()">🔄 Replay</button>
+    <div class="card glass-card">
+      <div class="emblem">✦</div>
+      <h1 class="serif-title glow-text">Forever Yours</h1>
+      <h2 class="names-title">Koushika & Gunank</h2>
+      <div class="divider"><span>✧</span></div>
+      <p class="body-text final-quote">"Thank you for being the most precious chapter of my life. No matter where time leads us, I will always choose you."</p>
+      <button onclick="location.reload()" class="outline-btn margin-top-lg">Replay Experience 🔄</button>
     </div>
   </section>
 
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
