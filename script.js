@@ -1,92 +1,101 @@
-// Pages
+// Pages Selection
 const pages = document.querySelectorAll(".page");
 
 function showPage(id) {
-  pages.forEach(p => p.classList.remove("active"));
-  document.getElementById(id).classList.add("active");
+  const targetPage = document.getElementById(id);
+  if (targetPage) {
+    pages.forEach(p => p.classList.remove("active"));
+    targetPage.classList.add("active");
+  } else {
+    console.error(`Page with ID "${id}" not found.`);
+  }
 }
 
-// Loading
+// Loading Hide
 window.onload = () => {
   setTimeout(() => {
-    document.getElementById("loading").style.display = "none";
+    const loadingElem = document.getElementById("loading");
+    if (loadingElem) {
+      loadingElem.style.display = "none";
+    }
   }, 2000);
 };
 
-// Buttons
+// Buttons Selection
 const startBtn = document.getElementById("startBtn");
-const continueBtn = document.getElementById("continueBtn");
+const nextBtn = document.getElementById("nextBtn");
 const yesBtn = document.getElementById("yesBtn");
 const noBtn = document.getElementById("noBtn");
-const letterBtn = document.getElementById("letterBtn");
+const galleryNextBtn = document.getElementById("galleryNextBtn");
 const finishBtn = document.getElementById("finishBtn");
 
 const balloonContainer = document.getElementById("balloonContainer");
 const letterText = document.getElementById("letterText");
 
 // Navigation
-startBtn.onclick = () => showPage("journeyPage");
+if (startBtn) {
+  startBtn.onclick = () => showPage("journey");
+}
 
-continueBtn.onclick = () => showPage("questionPage");
+if (nextBtn) {
+  nextBtn.onclick = () => showPage("questionPage");
+}
 
-// YES button prank
+// YES / NO Button Logic (Prank Game)
 let yesCount = 0;
 
-yesBtn.onclick = () => {
-  yesCount++;
+if (yesBtn) {
+  yesBtn.onclick = () => {
+    yesCount++;
 
-  if (yesCount < 4) {
-    yesBtn.style.position = "absolute";
-    yesBtn.style.left = Math.random() * 70 + "%";
-    yesBtn.style.top = Math.random() * 60 + "%";
-    return;
-  }
+    if (yesCount < 4) {
+      yesBtn.style.position = "absolute";
+      yesBtn.style.left = Math.random() * 70 + "%";
+      yesBtn.style.top = Math.random() * 60 + "%";
+      return;
+    }
 
-  showPage("balloonPage");
-  createBalloons();
-};
+    showPage("balloonPage");
+    createBalloons();
+  };
+}
 
-noBtn.onclick = () => {
-  showPage("balloonPage");
-  createBalloons();
-};
+if (noBtn) {
+  noBtn.onclick = () => {
+    showPage("balloonPage");
+    createBalloons();
+  };
+}
 
 // Balloon Game
 function createBalloons() {
-
+  if (!balloonContainer) return;
+  
   balloonContainer.innerHTML = "";
-
   let popped = 0;
+  const totalBalloons = 20;
 
-  for (let i = 0; i < 20; i++) {
-
+  for (let i = 0; i < totalBalloons; i++) {
     const b = document.createElement("div");
-
     b.className = "balloon";
-
     b.innerHTML = "🎈";
 
     b.onclick = () => {
-
-      b.remove();
-
+      b.style.visibility = "hidden";
       popped++;
 
-      if (popped === 20) {
-
-        showPage("galleryPage");
-
+      if (popped === totalBalloons) {
+        setTimeout(() => {
+          showPage("galleryPage");
+        }, 300);
       }
-
     };
 
     balloonContainer.appendChild(b);
-
   }
-
 }
 
-// Letter
+// Letter Typing Effect
 const letter = `My Dearest Koushika ❤️
 
 Happy Girlfriend Day 🌹
@@ -101,32 +110,37 @@ Forever Yours ❤️
 
 Gunank`;
 
-letterBtn.onclick = () => {
-
-  showPage("letterPage");
-
+function startLetterTyping() {
+  if (!letterText) return;
   letterText.innerHTML = "";
-
   let i = 0;
 
   function type() {
-
     if (i < letter.length) {
-
-      letterText.innerHTML += letter.charAt(i);
-
+      if (letter.charAt(i) === "\n") {
+        letterText.innerHTML += "<br>";
+      } else {
+        letterText.innerHTML += letter.charAt(i);
+      }
       i++;
-
       setTimeout(type, 35);
-
     }
-
   }
 
   type();
+}
 
-};
+// Gallery page -> Letter page button handler
+if (galleryNextBtn) {
+  galleryNextBtn.onclick = () => {
+    showPage("letterPage");
+    startLetterTyping();
+  };
+}
 
-finishBtn.onclick = () => {
-  showPage("endPage");
-};
+// Finish Button -> End page handler
+if (finishBtn) {
+  finishBtn.onclick = () => {
+    showPage("endPage");
+  };
+}
