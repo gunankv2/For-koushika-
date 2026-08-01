@@ -127,4 +127,6 @@ letterBtn.onclick = () => {
 
 };
 
-finish
+finishBtn.onclick = () => {
+  showPage("endPage");
+};
