@@ -1,108 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>For Koushika ❤️</title>
-  <link rel="stylesheet" href="style.css">
-  <!-- Premium Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;600&family=Alex+Brush&display=swap" rel="stylesheet">
-</head>
-<body>
-
-  <!-- Ambient Golden Glow -->
-  <div class="ambient-glow"></div>
-  <div class="bg-particles" id="bgParticles"></div>
-
-  <!-- Loading Screen -->
-  <div id="loading">
-    <div class="luxury-loader">
-      <div class="pulse-ring"></div>
-      <span class="heart-icon">✦</span>
-    </div>
-    <p class="loading-sub">Unlocking a private experience...</p>
-  </div>
-
-  <!-- Home Page -->
-  <section id="home" class="page active">
-    <div class="card glass-card">
-      <span class="tag">Exclusively For You</span>
-      <h1 class="serif-title">Happy Girlfriend Day</h1>
-      <div class="divider"><span>✧</span></div>
-      <p class="body-text">I created a small, timeless space in this digital world, dedicated solely to you...</p>
-      <button id="startBtn" class="premium-btn">Begin Experience <span class="arrow">→</span></button>
-    </div>
-  </section>
-
-  <!-- Journey Page -->
-  <section id="journey" class="page">
-    <div class="card glass-card">
-      <span class="tag">The Beginning</span>
-      <h1 class="serif-title">Where It All Began</h1>
-      <div class="gold-badge">03 . 12 . 2025</div>
-      <p class="body-text">Every extraordinary chapter starts with a single moment.<br>Ours was written on this very day.</p>
-      <button id="nextBtn" class="premium-btn">Continue Journey <span class="arrow">→</span></button>
-    </div>
-  </section>
-
-  <!-- Prank Question Page -->
-  <section id="questionPage" class="page">
-    <div class="card glass-card">
-      <h2 class="serif-subtitle">Shall we step into our cherished memories?</h2>
-      <div class="btnArea">
-        <button id="yesBtn" class="premium-btn">Yes, Always ✨</button>
-        <button id="noBtn" class="outline-btn">Not Yet 🤍</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- Balloon Game Page -->
-  <section id="balloonPage" class="page">
-    <div class="card glass-card">
-      <span class="tag">Interactive</span>
-      <h1 class="serif-title">Unlock The Vault</h1>
-      <p class="body-text">Tap all 15 glowing pearls to reveal your memories</p>
-      <div id="balloonContainer"></div>
-    </div>
-  </section>
-
-  <!-- Gallery Page -->
+  <!-- Gallery Page (Polaroid Aesthetic Style) -->
   <section id="galleryPage" class="page">
     <div class="card glass-card">
-      <span class="tag">Memories</span>
-      <h1 class="serif-title">Captured Moments</h1>
-      <div class="gallery">
-        <div class="img-frame">
-          <img src="Snapchat-1991032350.jpg" alt="Our Memory">
+      <span class="tag">Cherished Moments</span>
+      <h1 class="serif-title">Captured Love</h1>
+      
+      <!-- Aesthetic Polaroid Frame -->
+      <div class="polaroid-frame">
+        <div class="img-wrapper">
+          <img src="Snapchat-1991032350.jpg" alt="Our Memory" onerror="this.onerror=null; this.src='IMG_20251206_063726.jpg';">
+        </div>
+        <div class="polaroid-caption">
+          <p class="caption-text">You & Me Forever ❤️</p>
+          <span class="caption-date">03 Dec 2025</span>
         </div>
       </div>
+
       <button id="galleryNextBtn" class="premium-btn">Read My Letter <span class="arrow">→</span></button>
     </div>
   </section>
-
-  <!-- Love Letter Page -->
-  <section id="letterPage" class="page">
-    <div class="card glass-card letter-card">
-      <span class="tag">A Personal Note</span>
-      <h1 class="serif-title">My Heart To Yours</h1>
-      <div id="letterText" class="letter-box"></div>
-      <button id="finishBtn" class="premium-btn" style="display:none;">Forever & Always ✨</button>
-    </div>
-  </section>
-
-  <!-- End Page -->
-  <section id="endPage" class="page">
-    <div class="card glass-card">
-      <div class="emblem">✦</div>
-      <h1 class="serif-title glow-text">Forever Yours</h1>
-      <h2 class="names-title">Koushika & Gunank</h2>
-      <div class="divider"><span>✧</span></div>
-      <p class="body-text final-quote">"Thank you for being the most precious chapter of my life. No matter where time leads us, I will always choose you."</p>
-      <button onclick="location.reload()" class="outline-btn margin-top-lg">Replay Experience 🔄</button>
-    </div>
-  </section>
-
-  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
-  <script src="script.js"></script>
-</body>
-</html>
